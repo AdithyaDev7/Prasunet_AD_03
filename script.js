@@ -2,7 +2,7 @@ document.getElementById('weather-form').addEventListener('submit', async functio
     event.preventDefault();
 
     const city = document.getElementById('city-input').value.trim();
-    const apiKey = 'da920e308f5aaa054071b2cee005f932'; // Replace with your actual API key
+    const apiKey = 'da920e308f5aaa054071b2cee005f932'; 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric`;
 
     try {
