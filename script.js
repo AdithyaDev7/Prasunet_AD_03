@@ -8,14 +8,12 @@ document.getElementById('weather-form').addEventListener('submit', async functio
     try {
         const response = await fetch(url);
         
-        // Check if the response is not OK (e.g., 404 or 500 errors)
         if (!response.ok) {
             throw new Error('City not found or API request failed');
         }
         
         const data = await response.json();
 
-        // Check if the response contains weather data
         if (data.cod !== 200) {
             throw new Error(data.message || 'Error fetching weather data');
         }
